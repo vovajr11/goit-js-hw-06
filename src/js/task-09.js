@@ -2,8 +2,10 @@ const bgColorValue = document.querySelector(".color");
 const colorGenerationBtn = document.querySelector(".change-color");
 
 colorGenerationBtn.addEventListener("click", () => {
-  bgColorValue.textContent = getRandomHexColor();
-  document.body.style.backgroundColor = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+
+  bgColorValue.textContent = randomColor;
+  document.body.style.backgroundColor = randomColor;
 });
 
 function getRandomHexColor() {
